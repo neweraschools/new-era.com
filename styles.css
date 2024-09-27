@@ -1,0 +1,292 @@
+:root{
+    --primary-color: #a855f7;
+    --primary-color-dark: #9333ea;
+    --secondary-color: #ca8a04;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --extra-light: #faf5ff;
+    --max-width: 1200px;
+  }
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  a{
+    text-decoration: none;
+  }
+  body{
+    font-family: "poppins", sans-serif;
+  }
+  nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  background-color: #fff; 
+  z-index: 99;
+  }
+  .nav__content{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav.logo a{
+    font-family: sans-serif;
+    font-size: 10rem;
+    font-weight: 800;
+    color: orangered;
+    transition: 0.3s;
+  }
+  nav .logo a:hover{
+ font-family: 'Times New Roman';
+    color: orangered;
+    font-size: 2rem;
+  }
+  nav .checkbox{
+    display: none;
+  }
+  nav input{
+    display: none;
+  }
+  nav .checkbox i{
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+  }
+  ul li a{
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: orange;
+    transition: 0.3s;
+  }
+  ul li a:hover{
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid: 4rem;
+  }
+  .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .subtitle{
+    letter-spacing: 2px;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: .5rem;
+  }
+  .title{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+  .title span{
+    font-weight: 600;
+    color: orangered;
+  }
+  .decription{
+    line-height: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+  }
+  .action__btns{
+    display: flex;
+    gap: 1rem;
+  }
+  .action__btns button1{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+ 
+  .apply {
+    background-color: transparent;
+  }
+  .apply:hover {
+    background-color: var(--primary-color-dark);
+    color: #fff;
+  }
+  .upload{
+    color: var(--primary-color);
+  }
+  .upload:hover{
+  background-color: var(--primary-color-dark);
+  color: #fff;
+  }
+  .image{
+    display: grid;
+    place-items: center;
+  }
+  .image img{
+    width: min(25rem, 90%);
+    border-radius: 100%;
+  }
+    nav .checkbox{
+      display: block;
+    }
+    ul{
+      position: absolute;
+      width: 100%;
+      height: cal(100vh - 85px);
+      left: -100%;
+      top: 85px;
+      background-color: var(--extra-light);
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+    }
+    nav #check:checked ~ ul {
+      left: 0;
+    }
+    ul li a {
+      font-size: 1.2rem;
+    }
+    .section__container{
+      padding: 10rem 1rem 5rem 1rem;
+      text-align: center;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .image{
+      grid-area: 1/1/2/2;
+    }
+    .action__btns{
+      margin: auto;
+    }
+    .typewriter h1 {
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: .15em solid orange; /* The typewriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      letter-spacing: .15em; /* Adjust as needed */
+      animation: typing 10s steps(30, end), blink-caret .75s step-end infinite;
+  }
+
+  @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange; }
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.containers {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email/phonenumber"],
+input[type="formregistering"]{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffa600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.row {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+RESULT.html{
+            background-image: url('bg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+
